@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div id="botonContainer">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Nuevo Creyente</button>
+    </div>
+    <div>
+        <ul>
+            <li><a id="getTodos" href="../creyentes/index.html">Creyentes</a></li>
+            <li><a id="getMinisterio" href="../comuna/index.html">Comunas</a></li>
+            <li><a id="getAdultos" href="../barrio/index.html">Barrios</a></li>
+            <li><a id="getFormacion" href="../departamento/index.html">Departemento</a></li>
+            <li><a id="getRuta" href="../municipio/index.html">Municipio</a></li>
+        </ul>
+    </div>
+    <div class="cartas" id="cartas">
+        
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo Dato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                    <div class="modal-body">
+                        <form action="" method="POST" id="formPOST">
+                            <label for="nombre">Nombre Departamento</label>
+                            <input type="text" name="nombre" id="nombreDepartamento">
+                            <br><br>
+
+                            <input type="submit" name="submit" id="submit" value="Nuevo Dato">
+                        </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  <!-- Modal Update-->
+  <div class="modal fade" id="modalupdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="" method="POST" id="formularioUpdate">
+                <label for="nombre">Nombre Departamento</label>
+                <input type="text" name="nombre" id="nombreDepartamentoUpdate">
+                <br><br>
+
+                <input type="submit" name="submit" id="submit" value="Actualizar">
+                <input type="hidden" id="idUpdate">
+            </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script type="module" src="departamento.js"></script>
+</body>
+</html>
