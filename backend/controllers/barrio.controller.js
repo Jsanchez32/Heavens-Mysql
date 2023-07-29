@@ -3,7 +3,7 @@ import getConnection from "../db/database.js";
 const getDato = async (req,res)=>{
     try {
         const connection = await getConnection();
-        const datos = await connection.query("SELECT Barrio.idBarrio,Barrio.nombreBarrio, Comuna.nombreComuna FROM Barrio JOIN Comuna ON Barrio.idComuna = Comuna.idComuna");
+        const datos = await connection.query(`SELECT Barrio.idBarrio,Barrio.nombreBarrio, Comuna.nombreComuna FROM Barrio JOIN Comuna ON Barrio.idComuna = Comuna.idComuna`);
         res.send(datos);
     } catch (error) {
         res.status(404);
