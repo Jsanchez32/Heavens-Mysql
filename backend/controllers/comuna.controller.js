@@ -11,6 +11,7 @@ const getDato = async (req,res)=>{
     }
 }
 
+
 const addDato = async (req,res)=>{
     try {
         const connection = await getConnection();
